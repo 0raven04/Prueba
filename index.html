@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pruebas DevOps - GitHub Actions</title>
+</head>
+<body>
+    <h1>🚀 Proyecto de Pruebas DevOps</h1>
+    <p>Este proyecto es para practicar GitHub Actions, protección de ramas y CI/CD.</p>
+
+    <hr>
+
+    <h2>Calculadora Simple</h2>
+    <div>
+        <input type="number" id="num1" placeholder="Número 1" value="0">
+        <select id="operacion">
+            <option value="sumar">+</option>
+            <option value="restar">-</option>
+            <option value="multiplicar">×</option>
+            <option value="dividir">÷</option>
+        </select>
+        <input type="number" id="num2" placeholder="Número 2" value="0">
+        <button onclick="calcular()">Calcular</button>
+    </div>
+    <p>Resultado: <strong id="resultado">-</strong></p>
+
+    <hr>
+
+    <h2>Lista de Tareas</h2>
+    <div>
+        <input type="text" id="nuevaTarea" placeholder="Nueva tarea...">
+        <button onclick="agregarTarea()">Agregar</button>
+    </div>
+    <ul id="listaTareas"></ul>
+
+    <hr>
+
+    <h2>Contador</h2>
+    <p>Valor: <strong id="contador">0</strong></p>
+    <button onclick="cambiarContador(-1)">➖</button>
+    <button onclick="cambiarContador(1)">➕</button>
+    <button onclick="resetContador()">🔄 Reset</button>
+
+    <hr>
+
+    <h2>Info del Navegador</h2>
+    <pre id="infoNavegador"></pre>
+
+    <script src="app.js"></script>
+    <script>
+        // Mostrar info del navegador al cargar
+        document.addEventListener('DOMContentLoaded', () => {
+            const info = obtenerInfoNavegador();
+            document.getElementById('infoNavegador').textContent = JSON.stringify(info, null, 2);
+        });
+    </script>
+</body>
+</html>
