@@ -70,3 +70,4 @@ npm run lint
 5. Merge a `develop` → ver CI corriendo
 6. Abrir PR de `develop` a `main` → ver CI + greeting bot
 7. Merge a `main` → ver deploy automático
+# Prueba de CI
