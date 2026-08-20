@@ -35,3 +35,8 @@ jobs:
 
       - name: Compilar proyecto
         run: npm run build
+
+      - name: Ejecutar Build / Compilación
+        run: |
+          echo "Simulando error de compilacion..."
+          exit 1  
